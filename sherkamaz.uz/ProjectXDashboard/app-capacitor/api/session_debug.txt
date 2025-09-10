@@ -1,0 +1,240 @@
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+
+Session ID: 02ckgfffemhr853ipp0rageje0
+Session Data: Array
+(
+    [platform] => app
+    [user_id] => 2
+)
+Cookies: DASHBOARDSESSID=o8ppe2pueuibf8f236l4ccah3l; APPSESSID=02ckgfffemhr853ipp0rageje0
+

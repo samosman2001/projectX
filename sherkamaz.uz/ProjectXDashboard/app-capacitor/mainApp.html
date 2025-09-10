@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page</title>
+  <link rel="stylesheet" href="styles/mainApp.css">
+  <link rel="stylesheet" href="../frontend/styles/login.css">
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="your-logo.png" alt="Logo" class="logo" />
+    <div class="logout"><img src="../frontend/assets/icons/exitApp.svg"></div>
+  </header>
+
+  <main>
+    <!-- Content goes here -->
+  </main>
+
+  <nav class="bottom-nav">
+    <div class="item">
+      <div class="icon">🍎</div>
+      <div>Nutrition</div>
+    </div>
+    <div class="item">
+      <a href="exerciseApp.php">
+      <div class="icon">🏋️</div>
+      <div>Exercise</div>
+     </a>
+    </div>
+
+      <div class="home-button">
+ <a href="mainApp.php">
+    🏠
+  </a></div>
+
+    <div class="item">
+      <div class="icon">🗓️</div>
+      <div>Calendar</div>
+    </div>
+    <div class="item">
+      <div class="icon">📈</div>
+      <div>Progress</div>
+    </div>
+  </nav>
+<div class="toast fail"></div>
+<div class="toast success"></div>
+<script>
+  const exitButton = document.querySelector(".logout");
+  exitButton.addEventListener("click",()=>
+  {
+ window.location.href = "../backend/auth/logout.php?platform=app";
+  })
+function showToast(message) {
+  let toast;
+  if(message.toLowerCase().includes("successfully"))
+  toast = document.querySelector(".toast.success");
+  else
+  toast = document.querySelector(".toast.fail");
+  
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  // Hide after 3s
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+fetch('http://localhost/ProgrammingStuff/ProjectXDashboard/app-capacitor/getToastMessage.php', {
+  credentials :'include'
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+  if(data.message == "")
+    return;
+  showToast(data.message);
+}).catch(err=>console.log(err));
+</script>
+</body>
+</html>

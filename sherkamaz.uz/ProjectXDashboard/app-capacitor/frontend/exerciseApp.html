@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise - Leg Day</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/mainApp.css">
+  <link rel="stylesheet" type="text/css" href="../styles/exerciseApp.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="your-logo.png" alt="Logo">
+    </header>
+<main>
+    <div class="mode-switch">
+      <button :class="{active: mode==='gym'}" @click="mode='gym'">Gym</button>
+      <button :class="{active: mode==='home'}" @click="mode='home'">Home</button>
+    </div>
+
+    <h2>{{currentDay}}</h2>
+
+    <div class="exercise-box" v-for="exercise in exercises" :key="exercise.name">
+      <div class="exercise-title">Exercise: {{ exercise.name }}</div>
+      <div class="set-row" style="font-weight: bold;">
+        <div>Sets</div><div>Reps</div><div>Weight</div><div>Status</div>
+      </div>
+      <div class="set-row" v-for="(set, i) in exercise.sets" :key="i">
+        <input v-model="set.sets" type="number" />
+        <input v-model="set.reps" type="number" />
+        <input v-model="set.weight" type="number" />
+        <input v-model="set.status" type="text" />
+      </div>
+      <button class="add-set-btn" @click="addSet(exercise)">+ Add Set</button>
+    </div>
+
+    <div class="actions">
+      <button class="done-btn">Done</button>
+      <button class="finish-btn" @click="submitExercise">Finish</button>
+    </div>
+</main>
+<footer>
+     <nav class="bottom-nav">
+    <div class="item">
+      <a href="nutritionApp.html">
+      <div class="icon">🍎</div>
+      <div>Nutrition</div>
+    </a>
+    </div>
+    <div class="item">
+      <a href="exerciseApp.html">
+      <div class="icon">🏋️</div>
+      <div>Exercise</div>
+     </a>
+    </div>
+
+       <div class="home-button">
+ <a href="mainApp.html">
+    🏠
+  </a></div>
+
+    <div class="item">
+      <div class="icon">🗓️</div>
+      <div>Calendar</div>
+    </div>
+    <div class="item">
+      <div class="icon">📈</div>
+      <div>Progress</div>
+    </div>
+  </nav>
+  </div>
+</footer>
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          mode: 'home',
+          // exercises: [
+          //   { name: 'Squats', sets: [{ sets: 3, reps: 8, weight: 0, status: '' }] },
+          //   { name: 'Walking Lunges', sets: [{ sets: 3, reps: 8, weight: 0, status: '' }] },
+          //   { name: 'Romanian Deadlift', sets: [{ sets: 3, reps: 8, weight: 0, status: '' }] },
+          //   { name: 'Barbell squat', sets: [{ sets: 3, reps: 8, weight: 0, status: '' }] },
+          // ]
+          currentDay:'',
+          exercises:[]
+        }
+      },
+      methods: {
+        setSessionByDay()
+        {
+          const day  = new Date().getDate();
+
+          //check for which day you can 
+          if(day % 2 == 0)
+          {
+            this.currentDay = "Chest/Shoulder Day"
+            if(this.mode=="home")
+            {
+            
+            this.exercises =[
+              {name:"Pushups",
+                sets:[{sets : 3,reps : 8,weight : 0,status : "",mode:this.mode}]},
+              {name:"Pullups",
+                sets:[{sets:3,reps:15,weight:0,status:"",mode:this.mode}]}
+            ]}
+            else
+            {
+        this.exercises =[
+              {name:"Deadlift",
+                sets:[{sets : 3,reps : 8,weight : 0,status : "",mode:this.mode}]},
+              {name:"Bench Press",
+                sets:[{sets:3,reps:15,weight:0,status:"",mode:this.mode}]}
+            ]}
+            }
+         
+          else
+          {
+            this.currentDay = "Leg Day";
+            if(this.mode=="home")
+            {
+              
+            this.exercises = 
+            [
+              {
+                name:"Squats",
+                sets:[{sets:3,reps:20,weight:0,status:"",mode:this.mode}]
+              },
+
+              {
+                  name:"Lunges",
+                  sets: [{sets:4,reps:10,weight:0,status:"",mode:this.mode}]
+              }
+            ]
+        }
+
+          else
+          {
+              
+            this.exercises = 
+            [
+              {
+                name:"Leg Press",
+                sets:[{sets:3,reps:20,weight:0,status:"",mode:this.mode}]
+              },
+
+              {
+                  name:"Walking Lunges",
+                  sets: [{sets:4,reps:10,weight:0,status:"",mode:this.mode}]
+              }
+            ]
+          }
+        
+          }
+         
+        },
+        addSet(exercise) {
+          exercise.sets.push({ sets: 0, reps: 0, weight: 0, status: '' ,mode:this.mode});
+        },
+        //we are trying to filter out the sets which have at least 1 rep
+        submitExercise()
+        {
+          this.exercises.forEach(ex=>{
+            ex.sets = ex.sets.filter(set => set.reps > 0 && set.sets > 0);
+            
+          });
+ //from this sets we are trying to check whether at least such a set 
+          const hasData = this.exercises.some(ex=>ex.sets.length>0);
+          console.log(hasData);
+          if(!hasData)
+          {
+            alert("Fill it in at least one set");
+            return;
+          }
+          console.log(JSON.stringify(this.exercises))
+          fetch("../api/logExercise.php",
+          {
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            //send flat array to avoid the issues with debug
+            body:JSON.stringify(this.exercises)
+          })
+          .then(res=>res.json())
+          .then(data=>{
+           console.log("Server Response:", data);
+            // For debug
+           console.log(data);
+      if (data.success === true) {
+        
+        alert("Workout logged successfully!");
+      } else {
+        alert("Failed to log workout.");
+          }})
+        }
+      },
+      mounted()
+      {
+        this.setSessionByDay();
+      },
+      watch: {
+  mode(newMode) {
+    this.setSessionByDay(); // re-run session setup when mode changes
+  }
+}
+    }).mount('#app');
+
+  </script>
+</body>
+</html>
+

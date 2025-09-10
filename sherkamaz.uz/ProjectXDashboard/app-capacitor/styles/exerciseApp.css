@@ -1,0 +1,61 @@
+body
+{
+	padding: 0;
+}
+ .mode-switch { display: flex; gap: 1rem; justify-content: center; margin: 1rem 0; }
+    .mode-switch button {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: none;
+      background-color: #e0e0e0;
+    }
+    .mode-switch .active {
+      background-color: #007BFF;
+      color: white;
+    }
+    h2 { text-align: center; margin-bottom: 1rem; }
+    .exercise-box {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .exercise-title {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .set-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0.5rem;
+      font-size: 14px;
+      padding: 0.25rem 0;
+    }
+    .set-row input {
+      width: 100%;
+      padding: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .add-set-btn {
+      margin-top: 0.5rem;
+      background-color: #e0ffe0;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-around;
+      margin: 2rem 0 6rem;
+    }
+    .actions button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    

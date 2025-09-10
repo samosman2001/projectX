@@ -1,0 +1,326 @@
+<!-- Main Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale = 1.0">
+	<title>Main</title>
+	<link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+<aside>
+    
+        <nav class="navigation">
+            
+            <div class="upperPart">
+            <div class="icon"></div>
+            <a href="#" class="btn doublehelix" ><img src="assets/icons/doublehelix.svg" alt="Doublehelix" ></a>
+            <a href="main.html" class="btn main"><img src="assets/icons/main.svg" alt="Main"></a>
+            <a href="nutrition.html" class="btn nutrition"><img src="assets/icons/Nutrition.svg" alt="nutrition" ></a>
+            <a href="exercise.html" class="btn exercise"><img src="assets/icons/Dumbell.svg" alt="Exercise" ></a>
+            <a href="settings.html" class="btn settings"><img src="assets/icons/Settings.svg" alt="Settings" ></a>
+            <a href="calendar.html" class="btn calendar"><img src="assets/icons/Calendar.svg" alt="Calendar" ></a>
+            <a href="progressChart.html" class="btn progressChart"><img src="assets/icons/Statistics.svg" alt="progressChart" ></a>
+            </div>
+        <div class="lowerPart">
+            <a href="help.html" class="btn"><img src="assets/icons/Help.svg" alt="Help" ></a>
+            <a href="exit.php" class="btn"><img src="assets/icons/Exit.svg" alt="Exit" ></a>
+            <a href=""></a> 
+        </div>
+        </nav>
+    
+</aside>
+	<main>
+
+		<div class="header">
+			<h2>Health Overview</h2>
+            <div class="tools">
+                <div class="search">
+                    <img src = "assets/icons/search.svg">
+                </div>
+                  <div class="notification">
+                    <img src = "assets/icons/notification.svg">
+                </div>
+            </div>
+		</div>
+        <div class="content">
+        <div class="modelContent">
+		<div class="modelInput">Model Inputs</div>
+            <div class="cards modelCard">
+                
+        <span>To estimate either AnthropoAge or S-AnthropoAge,please introduce the following data:</span>
+    <form action="/submit" method="POST">
+      <div class="textContainer">
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+     </div>
+ 
+        <div class="text">
+        <span>Sex</span>
+     </div>
+       <div class="toggle-group">
+  <input type="radio" id="female" name="gender" value="female" hidden>
+  <label for="female">Female</label>
+
+  <input type="radio" id="male" name="gender" value="male" hidden>
+  <label for="male">Male</label>
+       </div>
+         <div class="text">
+        <span>Race/Ethnicity</span>
+       </div>
+
+        <!-- Options for Ethnicity  -->
+        <div class="toggle-group">
+        	<input type="radio" id ="white" name="enthicity" value = "white" hidden>
+           <label for="white">White</label>
+        
+        	<input type="radio" id ="black" name="enthicity" hidden>
+        <label for="black">Black</label>
+
+      <input type="radio" id ="mexican" name="enthicity" hidden>
+    <label for="mexican">Mexican</label>
+
+     <input type="radio" id ="other" name="enthicity" hidden>
+     <label for="other">Other</label>
+        </div>
+  	   <div class="text">
+        <span>Only Estimate S-Anthropoage</span>
+       </div>
+    <div class="swtichButton">
+	<label class="switch">
+    <input type="checkbox">
+  	  <div class="slider"></div>
+  	</label>
+	</div>
+
+<button type="submit">Submit</button>
+        </form>
+        <form>
+    <div class="text">
+        <span>For estimation of full Anthropoage ,please also introduce : </span>
+</div> 
+   
+   	<div class="textContainer">
+		<div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+
+        <div class="textfield">
+        <label for="username">Chronoglogical</label>
+        <input type="text" id ="username" name="username">
+        </div>
+    </div>  
+    <button type="submit">Submit</button>
+</form>
+</div>
+</div>
+
+<!-- BMI card -->
+<div class="BmiAndResults">
+<div class="cards BMI">
+    <div class="titleAndSelector">
+        <div class="title">
+<h2 >BMI calculator</h2></div>
+<div class="genderSelector">
+<label for="gender">Gender:</label>
+<select id="gender" name="gender">
+  <option value="lastWeek">Last Week</option>
+  <option value="lastMonth">Last Month</option>
+  <option value="thisWeek">This Month</option>
+  
+</select>
+</div>
+</div>
+<div class="inputs">
+<div class="leftColumn">
+<div class="bmiMetrics height-metrics">
+    <div class="ruler">
+        <div class="tick-group">
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick red"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+        </div>
+    </div>
+    <div class="bottom-row">
+        <div class="label">Height</div>
+        <div class="value">170cm</div>
+    </div>
+</div>
+<div class="bmiMetrics weight-metrics">
+    <div class="ruler">
+        <div class="tick-group">
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick red"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+        </div>
+    </div>
+    <div class="bottom-row">
+        <div class="label">Weight</div>
+        <div class="value">70kg</div>
+    </div>
+</div>
+</div>
+<div class="rightColumn bmiCard">
+	<div class="bmiTitle">Body Mass Index (BMI)</div>
+    <div class="statusAndResult">
+    <div class="bmiResult">24.9
+    </div>
+    <div class="bmiStatus">You're healthy</div>
+</div>
+    <div class="bmiBar">
+      <div class="bmiDot"></div>
+    </div>
+
+	<div class="bmiLabels">
+		<span>15</span>
+ 		<span>18.5</span>
+ 		<span>25</span>
+ 		<span>30</span>
+ 		<span>35</span>
+	</div>
+</div>
+</div>
+
+<div class="line">
+<hr class="hrLine">
+</div>
+<div class="bMeasurementsAndIllustration">
+<div class="bMeasurements">
+    <h2><span>Body Measurements</span></h2>
+
+<div class="timeOfChecking">
+    <span>Last Checked 2 Days ago</span>
+</div>
+<div class="bShape">
+    <span>Inverted Triangle 2 Days Ago</span>
+</div>
+<div class="metrics">
+    <div class="metric">
+        <span>Chest (cm)</span>
+        <div class="result chestResult">
+            <span>44.5</span>
+            <div class="upSticks">
+              <div class="upStick arrowUpLeftStick"></div>
+              <div class="upStick arrowUpRightStick"></div>
+              <div class="upStick arrowUpMiddleStick"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="metric">
+        <span>Waist (cm)</span>
+        <div class="result waistResult">
+            <span>34</span>
+            <div class="downSticks">
+              <div class="downStick arrowDownLeftStick"></div>
+              <div class="downStick arrowDownRightStick"></div>
+              <div class="downStick arrowDownMiddleStick"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="metric">
+        <span>Chest (cm)</span>
+        <div class="result chestResult">
+            <span>42.5</span>
+            <div class="upSticks">
+              <div class="upStick arrowUpLeftStick"></div>
+              <div class="upStick arrowUpRightStick"></div>
+              <div class="upStick arrowUpMiddleStick"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="illustration">
+    <img src="assets/icons/Male-Clothes.svg" alt="bodyIllustration">
+</div>
+
+</div>
+
+</div>
+<div class="cards anthopoageResults">
+    <div class="anthopoageCard">
+        <div class="description">
+            <span>37.8</span>
+            <span>Anthropoage</span>
+        </div>
+        <div class="image">
+            <img src=".svg" alt="image">
+        </div>
+    </div>
+
+    <div class="anthopoageCard">
+        <div class="description">
+            <span>-2.3</span>
+            <span>AnthropoageAcceleration</span>
+        </div>
+        <div class="image">
+            <img src=".svg" alt ="AhtropoageAccelaration">
+        </div>
+    </div>
+
+     <div class="anthopoageCard">
+        <div class="description">
+            <span>NON-ACCELERATED</span>
+            <span>Aging rate</span>
+        </div>
+        <div class="image">
+            <img src=".svg" alt ="NON-ACCELERATED AGING">
+        </div>
+    </div>
+
+</div>
+
+</div>
+</div>
+	</main>
+    </div>
+</body>
+</html>

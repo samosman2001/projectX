@@ -1,0 +1,637 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fixed Sidebar */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px; /* or whatever width your sidebar is */
+  height: 100%;
+  background-color: #1e1e1e;
+  z-index: 1000;
+}
+
+/* Navigation styling inside aside (optional for spacing) */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.upperPart, .lowerPart {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+
+/* Shift main content to the right */
+main {
+  margin-left: 80px; /* same as sidebar width */
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+.header h2 
+{
+ font-size: 2rem; 
+
+  font-family: 'Lato', sans-serif;
+  padding: 0 20px;
+ }
+ .header
+ {
+  display: flex;
+  gap: 20%;
+ }
+ .tools
+ {
+  display: flex;
+  gap: 10px;
+ }
+ .content
+ {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+ }
+ .modelContent
+ {
+  width: 100%;
+ }
+ .modelInput
+ {
+  width: 100%;
+
+ }
+.modelInput
+{
+ background-color: #D9D9D9;
+ width: 100%;
+ height: 46px;
+ color: white;
+transform: translateX(-10px);
+ border-radius: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.cards
+{
+  padding: 10px;
+  margin-right: 20px;
+  max-width: 100%;
+ max-width: 100%;
+   /* Soft gray shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ display: flex;
+ flex-direction: column;
+
+ border-radius: 21px;
+}
+
+
+.BmiAndResults
+{
+  width: 100%;
+  margin-top: 46px;
+  margin-left: 10px;
+}
+
+.textContainer{
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+ gap:20px;
+}
+.textfield
+{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.textfield input
+{
+  margin-top: 20px;
+  outline: none;
+  border-radius: 32px;
+  height: 33px;
+background-color: #E8E7E7;
+color:#1E1E1E;
+padding-left: 5px;
+border:none;
+}
+span:first-child { 
+font-weight:400; }
+span
+{
+  display: inline-block;
+  margin:20px;
+
+
+}
+/*switch button which changes colors */
+.switch
+{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin: 20px;
+
+}
+.switch input{
+  opacity: 0;
+  width: 0;
+  height:0;
+  }
+.slider
+{
+  position: absolute;
+  cursor: pointer;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#F5F5F5;
+  transition: 0.4s;
+  border-radius: 34px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+
+}
+.slider:before{
+content: "";
+position: absolute;
+height: 20px;
+width: 20px;
+left: 3px;
+top:3px;
+background-color: #D3D3D3;
+transition: 0.4s;
+border-radius: 50%;
+}
+/*.switch input:checked + .slider{
+
+  background-color:#4CAF50 ;
+}*/
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+  background-color:#4CAF50 ;
+}
+ 
+
+/*That's how you are going to make a toggle button in order */
+.toggle-group{
+  display: flex;
+  border-radius: 8px;
+  max-width: 100%; /* ensures no overflow */
+  border-radius: 8px;
+  overflow: hidden;
+}
+.toggle-group label 
+{
+  flex: 1;
+  padding: 7px 20px;
+  background-color:#1976D2 ;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+.toggle-group input[type="radio"]:checked + label{
+background-color: #03A9F4;
+ font-weight: bold;
+}
+
+/*button functionality*/
+button{
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  background-color: #6B76EF;
+  border: none;
+  border-radius: 20px;
+  font-weight: 100;
+  transition: all 0.3s ease-in-out;
+}
+button:active{
+ transform: translateY(2px);
+ box-shadow: 0 1px 0 #6B76EF ;
+}
+/*BMI CARD */
+.BmiAndResults
+{
+  display: flex;
+  flex-direction: column;
+}
+.cards.BMI{
+  background-color:#303030;
+
+  color: white;
+}
+/*title and selector */
+
+.BMI h2 {
+  color: white;
+}
+
+.titleAndSelector
+{
+ display: flex;
+ justify-content: space-between;
+}
+.titleAndSelector .genderSelector
+{
+  margin-right: 15%;
+}
+
+/*inputs and markers*/
+.inputs
+{
+  display: flex;
+  margin-bottom: 49px;
+
+}
+.leftColumn
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+
+ 
+}
+
+.rightColumn{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.bmiMetrics{
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding:12px 12px;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;
+
+}
+ .height-metrics, .weight-metrics {
+      width: 70%;
+      height: 70px;
+    }
+    .height-metrics{background-color: #fce0b2;}
+    .weight-metrics{background-color:#cff7f8;}
+    .ruler
+    {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .tick-group
+    {
+      display: flex;
+      gap: 5px;
+    }
+      .tick {
+      width: 3px;
+      height: 10px;
+      background-color: #333;
+      opacity: 0.6;
+      border-radius: 25px;
+    } 
+     .tick.red{
+      background-color: #D16564;
+      height : 18.77px;
+     }
+     .bottom-row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+     }
+     .label
+     {
+      font-size:16px;
+      font-weight: 500;
+      color: black;
+     }
+     .value{
+      color: black;
+      font-weight: 500;
+      color: black;
+     }
+     .bmiScale
+     {
+      display: flex;
+      flex-direction: column;
+      background-color: #4A4949;
+     }
+
+     /*Right column of BMI */
+.bmiCard{
+  
+  background-color:#4A4949;
+  color:white;
+  padding: 16px;
+  border-radius :12px;
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+}
+.bmiTitle{
+   font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 6px;
+}
+.statusAndResult
+{
+  display: flex;
+  justify-content: space-between;
+
+}
+.bmiResult{
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+.bmiStatus{
+  background-color: #c8facc;
+      color: #333;
+      width: 50%;
+      padding: 4px 10px;
+      border-radius: 12px;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 10px;
+}
+.bmiBar{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  border-radius: 21px;
+  background: 
+  linear-gradient(to right, #5c9ded, #8fe388, #f5a97f, #ec6c6c);
+  margin-top: 6px;
+}
+.bmiDot{
+  position: absolute;
+  top:-3px;
+  left:30%;
+  width: 10px;
+  height: 100%;
+  background-color: #D16564;
+  border: 2px white solid ;
+  border-radius: 50%;
+}
+.bmiLabels{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.8px;
+  color: #ccc;
+ width: 100%;
+}
+.rightColumn span
+{
+  margin: 0;
+}
+/*Body measurement */
+
+.bMeasurementsAndIllustration
+{
+  display: flex;
+  gap:20px;
+}
+.bMeasurements
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.illustration
+{
+  display: flex;
+    justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  height:100%;
+  width: 100%;
+}
+.bMeasurements span
+{
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+.timeOfChecking span
+{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+.bShape{
+  display: inline-block;
+  background-color: gray;
+  border-radius: 8px;
+  margin-left: 20px;
+  padding: 10px;
+}
+.bShape span{
+  margin: 0;
+}
+.metrics
+{
+ margin-top:99px;
+ display: flex; 
+ flex-direction: column;
+ gap:17px;
+}
+.metric{
+  display: flex;
+  width: 70%;
+  height: 91px;
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 12px;
+ color: black;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.result{
+  display: flex;
+}
+.upSticks{
+  display: flex;
+  flex-direction: column;
+  
+}
+.upStick{
+  width: 10px;
+  height: 2px;
+  background-color: green;
+}
+.arrowUpLeftStick 
+{
+  transform:translateY(2px) rotate(45deg) 
+}
+.arrowUpRightStick 
+{
+  transform:translateX(-6px) rotate(-45deg) ;
+}
+.arrowUpMiddleStick{
+  transform: translateX(-5.5px) translateY(3px)rotate(90deg) ;
+  width:15px;
+}
+.downSticks{
+  width: 10px;
+  height: 2px;
+ transform: translateY(10px);
+  
+}
+.downStick
+{
+    width: 10px;
+  height: 2px;
+  background-color: red;
+
+}
+.arrowDownLeftStick
+{
+  transform:translateY(2px) rotate(-45deg);
+
+}
+.arrowDownRightStick
+{
+  transform:translateX(-6px) rotate(45deg);
+}
+.arrowDownMiddleStick{
+  transform: translateX(-5.7px) translateY(-7px)rotate(90deg) ;
+  width:15px;
+}
+.result span
+{
+ margin-top: 0;
+}
+/*AnthropoageResults card*/
+.anthopoageResults {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  
+  max-width: 100%; /* or as needed */
+  margin-top: 20px; /* center horizontally */
+  justify-content: center;
+  align-items: center;
+}
+.anthopoageCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 70%;
+}
+.anthopoageCard:nth-child(1) {
+  background-color: #3e00ff; /* blue-violet */
+}
+
+.anthopoageCard:nth-child(2) {
+  background-color: #00c6ff; /* sky blue */
+}
+
+.anthopoageCard:nth-child(3) {
+  background-color: #f28b3d; /* orange */
+}
+.anthopoageCard .description {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.anthopoageCard .description span:first-child {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.anthopoageCard .image img {
+  width: 40px;
+  height: 40px;
+}
+.anthopoageCard:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+.toast{
+ visibility: hidden;
+  opacity: 0;
+  min-width: 250px;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%); /* Hide above screen */
+  z-index: 999;
+  transition: transform 2s ease, opacity 0.4s ease;
+}
+@keyframes dropDownUp {
+  0% {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-50%) translateY(20%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-50%) translateY(80%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 0;
+  }
+}
+.toast.fail.show
+{
+   background-color: red;
+     animation: dropDownUp 2s  ease-in-out;
+  visibility: visible;
+}
+.toast.success.show{
+  background-color: green;
+    animation: dropDownUp 2s  ease-in-out;
+  visibility: visible;
+}

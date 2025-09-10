@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/login.css" />
+  <title>Log In / Register</title>
+  <style>
+    /* Animation container */
+    .loginBox, .registerBox {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .hiddenBox {
+      opacity: 0;
+      transform: translateX(100%);
+      pointer-events: none;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="leftBox">
+        <div class="logo">
+          <img src="frontend/assets/icons/doublehelix.svg" />
+          <p>Optimize your body, hack your life</p>
+        </div>
+      </div>
+
+      <div class="rightBox">
+        <!-- Login Box -->
+        <div class="loginBox" id="loginBox">
+          <form>
+            <h2>Log in</h2>
+            <label>
+              <input type="email" name="email" placeholder="Email" required />
+            </label>
+
+            <div class="password">
+              <input type="password" id="passwordInput" name="password" placeholder="Password" required />
+              <div class="eyeBackground">
+                <div class="eyeIconCard" id="togglePassword">
+                  <img src="assets/icons/Eye-open.svg" alt="Show Password" />
+                </div>
+              </div>
+            </div>
+
+            <span>Forgot the password?</span>
+            <div class="remember">
+              Remember me
+              <div class="swtichButton">
+                <label class="switch">
+                  <input type="checkbox" name="remember" value="yes" />
+                  <div class="slider"></div>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit">Log in</button>
+          </form>
+          <div class="register">
+            Don’t have an account yet? <a href="#" id="showRegister">Register</a>
+          </div>
+        </div>
+
+        <!-- Register Box -->
+        <div class="loginBox hiddenBox" id="registerBox">
+          <form>
+            <a href="#" id="backToLogin">&lt; Log In</a>
+            <h2>Register</h2>
+            <label><input type="email" placeholder="Email Address" required /></label>
+
+            <div class="password">
+              <input type="password" id="newPassword" placeholder="New Password" required />
+              <div class="eyeBackground">
+                <div class="eyeIconCard" id="toggleNewPassword">
+                  <img src="assets/icons/Eye-open.svg" alt="Show Password" />
+                </div>
+              </div>
+            </div>
+
+            <div class="password">
+              <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+              <div class="eyeBackground">
+                <div class="eyeIconCard" id="toggleConfirmPassword">
+                  <img src="assets/icons/Eye-open.svg" alt="Show Password" />
+                </div>
+              </div>
+            </div>
+
+            <label><input type="tel" placeholder="Phone Number (optional)" /></label>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Eye toggle logic for all password fields
+    function setupToggle(inputId, toggleId) {
+      const input = document.getElementById(inputId);
+      const toggle = document.getElementById(toggleId);
+      const icon = toggle.querySelector("img");
+
+      toggle.addEventListener("click", () => {
+        const isHidden = input.type === "password";
+        input.type = isHidden ? "text" : "password";
+        icon.src = isHidden ? "assets/icons/Eye-closed.svg" : "assets/icons/Eye-open.svg";
+      });
+    }
+
+    setupToggle("passwordInput", "togglePassword");
+    setupToggle("newPassword", "toggleNewPassword");
+    setupToggle("confirmPassword", "toggleConfirmPassword");
+
+    // Toggle between login and register
+    const loginBox = document.getElementById("loginBox");
+    const registerBox = document.getElementById("registerBox");
+    const showRegister = document.getElementById("showRegister");
+    const backToLogin = document.getElementById("backToLogin");
+
+    showRegister.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginBox.classList.add("hiddenBox");
+      registerBox.classList.remove("hiddenBox");
+    });
+
+    backToLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      registerBox.classList.add("hiddenBox");
+      loginBox.classList.remove("hiddenBox");
+    });
+  </script>
+</body>
+</html>

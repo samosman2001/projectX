@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capacitor</title>
+  <link rel="stylesheet" href="../frontend/styles/login.css">
+</head>
+<body>
+  <main>
+  <div class="appContainer">
+      <div class="leftBox appLeftBox">
+      <div class="logo">
+      <img src="../frontend/assets/icons/doublehelix.svg">
+      <span>Optimize your body,hack your life</span>
+            </div>
+    </div>
+      <div class="rightBox appRightBox">
+<div class="loginBox" id ="loginBox">
+  <form method="POST" action="appLogin.php">
+    <h2>Log in</h2>
+
+    <label>
+      <input type="email" name="email" placeholder="Email" required>
+    </label>
+
+    <div class="password">
+      <input type="password" id ="passwordInput"name="password" placeholder="Password" required>
+      <div class="eyeBackground">
+      <div class="eyeIconCard" id="togglePassword">
+        <img src="../frontend/assets/icons/Eye-open.svg" alt="Show Password">
+      </div>
+    </div>
+</div>
+
+    <span>Forgot the password?</span>
+      <div class="remember">Remember me
+      <div class="swtichButton">
+  <label class="switch">
+    <input type="checkbox" name="remember" value="yes">
+      <div class="slider"></div>
+    </label>
+  </div>
+    </div>
+
+    <button id ="login"type="submit">Log in</button>
+  </form>
+    <div class="register">
+            Don’t have an account yet? <a href="#" id="showRegister">Register</a>
+          </div>
+</div>
+          <!-- Register Box  -->
+ <div class="loginBox hiddenBox" id="registerBox">
+  <!-- //attach register.php to traverse to another page when clicked  -->
+          <form method="POST" action="../backend/auth/register.php?platform=app">
+            <a href="#" id="backToLogin">&lt; Log In</a>
+            <h2>Register</h2>
+            <label><input type="email" id = "email" name ="email" placeholder="Email Address" required /></label>
+
+            <div class="password">
+              <input type="password" id="newPassword" name="newPassword" placeholder="New Password" required />
+              <div class="eyeBackground">
+                <div class="eyeIconCard" id="toggleNewPassword">
+                  <img src="../frontend/assets/icons/Eye-open.svg" alt="Show Password" />
+                </div>
+              </div>
+            </div>
+
+            <div class="password">
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required />
+              <div class="eyeBackground">
+                <div class="eyeIconCard" id="toggleConfirmPassword">
+                  <img src="../frontend/assets/icons/Eye-open.svg" alt="Show Password" />
+                </div>
+              </div>
+            </div>
+
+            <label><input type="tel" placeholder="Phone Number (optional)" /></label>
+            <button  type="submit">Register</button>
+          </form>
+        </div>
+</div>
+</div>
+<div class="toast fail"></div>
+<div class="toast success"></div>
+
+        <script>
+          
+           function setUpToggle(inputId,toggleId)
+  {
+    const input = document.getElementById(inputId);
+    const toggle  = document.getElementById(toggleId);
+    const icon = toggle.querySelector("img");
+
+    toggle.addEventListener("click",()=>
+    {
+      const isHidden =input.type ==="password";
+      input.type = isHidden?"text":"password";
+      icon.src =isHidden?"../frontend/assets/icons/Eye-closed.svg" : "../frontend/assets/icons/Eye-open.svg";
+    })
+  }
+  document.querySelector("#registerBox form").addEventListener("submit", (e) => {
+  const newPassword = document.getElementById("newPassword").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const email = document.getElementById('email').value;
+
+  if (newPassword !== confirmPassword) {
+   e.preventDefault();
+      showToast("Passwords do not match");
+  }
+
+});
+
+  setUpToggle("passwordInput","togglePassword");
+  setUpToggle("newPassword","toggleNewPassword");
+  setUpToggle("confirmPassword","toggleConfirmPassword");
+
+const loginBox = document.getElementById("loginBox");
+const registerBox = document.getElementById("registerBox");
+const showRegister = document.getElementById("showRegister");
+const backToLogin = document.getElementById("backToLogin");
+
+showRegister.addEventListener("click" ,(e)=>
+{
+ e.preventDefault();
+ loginBox.classList.add("hiddenBox");
+ registerBox.classList.remove("hiddenBox");
+});
+backToLogin.addEventListener("click",(e)=>{
+e.preventDefault();
+loginBox.classList.remove("hiddenBox");
+registerBox.classList.add("hiddenBox");
+});
+function showToast(message) {
+  let toast;
+  if(message.toLowerCase().includes("successfully"))
+  toast = document.querySelector(".toast.success");
+  else
+  toast = document.querySelector(".toast.fail");
+  
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  // Hide after 3s
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+//each time you click on back button it should be refreshed
+window.onpageshow = function(e) {
+  if (e.persisted) location.reload();
+};
+  // ✅ Remove the `msg` parameter from the URL
+
+ // history.replaceState(null, '', window.location.pathname);
+
+
+
+
+ fetch('http://localhost/ProgrammingStuff/ProjectXDashboard/app-capacitor/appLogin.php', {
+ 	crdentials:"include"
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+  if(data.message == "")
+   return;
+  showToast(data.message);
+
+}).catch(err=>console.log(err));
+</script>
+
+</body>
+</main>
+</html>
