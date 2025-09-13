@@ -43,9 +43,9 @@ Update config.php with your DB credentials.
 Run with a local server (XAMPP, WAMP, Laragon, etc.).
 
 🔑 Demo Credentials
-
+(You can register into the website and app as well)
 To explore the live app:
 
-Login: demo
+Login: 1@gmail.com
 
-Password: demo123
+Password: 1
