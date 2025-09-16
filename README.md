@@ -49,3 +49,8 @@ To explore the live app:
 Login: 1@gmail.com
 
 Password: 1
+
+❌ **Current Limitations**
+- **Settings, Calendar, Help and Progress bar** icons in the sidebar are clickable, but their functionality is not yet implemented.  
+- These features are part of the planned roadmap and will be developed in the next iterations.  
+
