@@ -38,7 +38,7 @@ setcookie(
 }
 $_SESSION['toast_message'] = "You have successfully logged in!";
    if ($_SESSION["platform"] == "dashboard"){
-     header("Location: /ProjectXDashboard/frontend/main.php");
+     header("Location: ProjectXDashboard/frontend/main.php");
   }
 //   else 
 //   {

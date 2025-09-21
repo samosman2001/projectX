@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -240,8 +239,10 @@ let workoutChart = null;
       let counts=[];
       // Get Monday and Sunday of the current week
       const now = new Date();
+      console.log(now + " ");
       const day = now.getDay();
       const monday = new Date(now);
+      console.log(monday);
       monday.setDate(now.getDate() + (day === 0 ? -6 : 1 - day));
       monday.setHours(0, 0, 0, 0);
       const sunday = new Date(monday);
@@ -261,8 +262,14 @@ let workoutChart = null;
           const jsDay = date.getDay();
           const index = (jsDay + 6) % 7;
           sessions[index] += 1;
-
-          return `<li>${entry.name} - ${entry.sets} sets, ${entry.reps} reps @ ${entry.weight}</li>`;
+        const tz = "Asia/Tashkent";
+        const created_atDate = new Date(new Date(entry.created_at).toLocaleString('en-US',{timeZone:tz}));
+        const weekday = new Intl.DateTimeFormat('en-US',{
+          timeZone : tz,
+          weekday :'short'
+        }).format(created_atDate);
+         console.log(weekday);
+          return `<li>${entry.name} - ${entry.sets} sets, ${entry.reps} reps @ ${entry.weight} + <b>${weekday}</b></li> `;
         })
         .join("");
       

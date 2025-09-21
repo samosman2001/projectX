@@ -48,13 +48,13 @@ session_start();
 <footer>
      <nav class="bottom-nav">
     <div class="item">
-      <a href="nutritionApp.php">
+      <a href="nutritionApp.html">
       <div class="icon">🍎</div>
       <div>Nutrition</div>
     </a>
     </div>
     <div class="item">
-      <a href="exerciseApp.php">
+      <a href="exerciseApp.html">
       <div class="icon">🏋️</div>
       <div>Exercise</div>
      </a>
