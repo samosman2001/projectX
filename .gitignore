@@ -1,6 +1,12 @@
+# dependencies
 /vendor/
-/node_modules/
+/sherkamaz.uz/vendor/
+
+# secrets
 .env
-*.log
-/storage/*
-!/storage/.gitkeep
+/sherkamaz.uz/.env
+
+# OS/editor junk (optional)
+.DS_Store
+Thumbs.db
+.idea/
